@@ -49,3 +49,9 @@ spark.sql(f"SELECT * FROM {table_name}").show()
 # MAGIC %sql
 # MAGIC select  * from person_info
 # MAGIC
+
+# COMMAND ----------
+
+df_filtered = df.filter(df.age > 25)
+print("Filtered DataFrame (age > 25):")
+df_filtered.show()
